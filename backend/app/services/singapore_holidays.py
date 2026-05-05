@@ -1,78 +1,57 @@
-import httpx
+import json
+import os
 from datetime import datetime, date
 from typing import List
 from sqlalchemy.orm import Session
 
-from app.config import settings
 from app.models.holiday import Holiday
-from app.services.cache import cache_get, cache_set
+
+_SEEDS_PATH = os.path.join(
+    os.path.dirname(__file__), "../../data/seeds/holidays.json"
+)
 
 
-async def fetch_holidays_from_api(year: int) -> List[dict]:
-    """Fetch SG public holidays from data.gov.sg for a given year."""
-    cache_key = f"sg_holidays_{year}"
-    cached = cache_get(cache_key)
-    if cached:
-        return cached
-
-    url = "https://data.gov.sg/api/action/datastore_search"
-    params = {
-        "resource_id": settings.SG_HOLIDAYS_RESOURCE_ID,
-        "limit": 100,
-        "q": str(year),
-    }
-    async with httpx.AsyncClient(timeout=15) as client:
-        resp = await client.get(url, params=params)
-        resp.raise_for_status()
-        data = resp.json()
-
-    records = data.get("result", {}).get("records", [])
-    holidays = [r for r in records if str(r.get("date", "")).startswith(str(year))]
-
-    cache_set(cache_key, holidays, ttl_hours=settings.HOLIDAY_CACHE_TTL_HOURS)
-    return holidays
+def _load_static_holidays(year: int) -> List[dict]:
+    """Load holidays from the bundled static JSON (no network call needed)."""
+    with open(_SEEDS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get(str(year), [])
 
 
-async def sync_holidays(year: int, db: Session) -> List[Holiday]:
-    """Fetch holidays from API and upsert into DB. Returns the stored Holiday ORM objects."""
-    raw = await fetch_holidays_from_api(year)
+def _upsert_holidays(records: List[dict], db: Session) -> List[Holiday]:
     fetched_at = datetime.utcnow().isoformat()
     stored = []
-
-    for rec in raw:
-        date_str = rec.get("date", "")
-        if not date_str:
-            continue
-
-        try:
-            d = date.fromisoformat(date_str)
-        except ValueError:
-            continue
-
-        name = rec.get("holiday", rec.get("name", "Unknown Holiday"))
+    for rec in records:
+        date_str = rec["date"]
+        d = date.fromisoformat(date_str)
         existing = db.query(Holiday).filter(Holiday.date == date_str).first()
-
         if existing:
-            existing.name = name
-            existing.day_of_week = d.strftime("%A")
+            existing.name = rec["name"]
             existing.fetched_at = fetched_at
             stored.append(existing)
         else:
             h = Holiday(
                 date=date_str,
                 day_of_week=d.strftime("%A"),
-                name=name,
+                name=rec["name"],
                 year=d.year,
                 is_observed=False,
                 fetched_at=fetched_at,
             )
             db.add(h)
             stored.append(h)
-
     db.commit()
     for h in stored:
         db.refresh(h)
     return stored
+
+
+async def sync_holidays(year: int, db: Session) -> List[Holiday]:
+    """Load static holiday data for the year and upsert into DB."""
+    records = _load_static_holidays(year)
+    if not records:
+        return []
+    return _upsert_holidays(records, db)
 
 
 def get_holidays_from_db(year: int, db: Session) -> List[Holiday]:
@@ -80,7 +59,6 @@ def get_holidays_from_db(year: int, db: Session) -> List[Holiday]:
 
 
 async def get_or_sync_holidays(year: int, db: Session) -> List[Holiday]:
-    """Return from DB if present, otherwise fetch from API and store."""
     holidays = get_holidays_from_db(year, db)
     if holidays:
         return holidays
