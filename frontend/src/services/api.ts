@@ -41,6 +41,13 @@ export const api = {
       })
       .then((r) => r.data),
 
+  getFlightLinks: (destination: string, outbound_date: string, return_date: string) =>
+    client
+      .get<{ google_flights: string; skyscanner: string }>("/search/flight-links", {
+        params: { destination, outbound_date, return_date },
+      })
+      .then((r) => r.data),
+
   searchHotels: (city_code: string, check_in: string, check_out: string, adults = 2) =>
     client
       .get<HotelSearchResponse>("/search/hotels", {
