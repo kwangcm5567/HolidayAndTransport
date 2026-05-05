@@ -19,6 +19,14 @@ class Settings(BaseSettings):
     MAX_LEAVE_DAYS: int = 5
 
     ALLOWED_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    # Add your Vercel URL here via env var, e.g. EXTRA_ORIGIN=https://your-app.vercel.app
+    EXTRA_ORIGIN: str = ""
+
+    def get_allowed_origins(self) -> List[str]:
+        origins = list(self.ALLOWED_ORIGINS)
+        if self.EXTRA_ORIGIN:
+            origins.append(self.EXTRA_ORIGIN)
+        return origins
 
     SG_HOLIDAYS_RESOURCE_ID: str = "d_3751791452397f1b1c80c451447e30d"
 

@@ -9,7 +9,11 @@ import type {
   LeaveCategory,
 } from "../types";
 
-const client = axios.create({ baseURL: "/api/v1" });
+const BASE_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api/v1`
+  : "/api/v1";
+
+const client = axios.create({ baseURL: BASE_URL });
 
 export const api = {
   getHolidays: (year: number) =>
