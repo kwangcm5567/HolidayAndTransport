@@ -6,6 +6,7 @@ import { YearSelector } from "../components/filters/YearSelector";
 import { HolidayCard } from "../components/holiday/HolidayCard";
 import { Spinner } from "../components/ui/Spinner";
 import { ErrorAlert } from "../components/ui/ErrorAlert";
+import { BASE_URL } from "../services/api";
 
 export function Dashboard() {
   const { year, category } = useFilterStore();
@@ -33,7 +34,7 @@ export function Dashboard() {
       )}
 
       {isError && (
-        <ErrorAlert message="无法加载数据。请确认后端服务已启动（localhost:8000）。" />
+        <ErrorAlert message={`无法加载数据。后端地址：${BASE_URL}。请检查网络或 VITE_API_URL 配置。`} />
       )}
 
       {data && (
