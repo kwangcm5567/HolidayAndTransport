@@ -1,0 +1,17 @@
+[
+  {"city_code": "PEN", "city_name": "槟城 Penang",        "country": "Malaysia",      "amadeus_city_code": "PEN", "flight_hours": 0.75, "category": "short_trip",  "popular_rank": 1},
+  {"city_code": "KUL", "city_name": "吉隆坡 Kuala Lumpur","country": "Malaysia",      "amadeus_city_code": "KUL", "flight_hours": 1.0,  "category": "short_trip",  "popular_rank": 2},
+  {"city_code": "BTH", "city_name": "巴淡岛 Batam",        "country": "Indonesia",     "amadeus_city_code": "BTH", "flight_hours": 0.5,  "category": "short_trip",  "popular_rank": 3},
+  {"city_code": "BKK", "city_name": "曼谷 Bangkok",        "country": "Thailand",      "amadeus_city_code": "BKK", "flight_hours": 2.5,  "category": "regional",    "popular_rank": 4},
+  {"city_code": "HKT", "city_name": "普吉岛 Phuket",       "country": "Thailand",      "amadeus_city_code": "HKT", "flight_hours": 1.5,  "category": "regional",    "popular_rank": 5},
+  {"city_code": "DPS", "city_name": "巴厘岛 Bali",          "country": "Indonesia",     "amadeus_city_code": "DPS", "flight_hours": 2.5,  "category": "regional",    "popular_rank": 6},
+  {"city_code": "SGN", "city_name": "胡志明市 Ho Chi Minh", "country": "Vietnam",       "amadeus_city_code": "SGN", "flight_hours": 2.0,  "category": "regional",    "popular_rank": 7},
+  {"city_code": "HAN", "city_name": "河内 Hanoi",           "country": "Vietnam",       "amadeus_city_code": "HAN", "flight_hours": 3.5,  "category": "regional",    "popular_rank": 8},
+  {"city_code": "DAD", "city_name": "岘港 Da Nang",         "country": "Vietnam",       "amadeus_city_code": "DAD", "flight_hours": 2.5,  "category": "regional",    "popular_rank": 9},
+  {"city_code": "REP", "city_name": "暹粒 Siem Reap",       "country": "Cambodia",      "amadeus_city_code": "REP", "flight_hours": 2.5,  "category": "regional",    "popular_rank": 10},
+  {"city_code": "HKG", "city_name": "香港 Hong Kong",       "country": "Hong Kong",     "amadeus_city_code": "HKG", "flight_hours": 3.5,  "category": "regional",    "popular_rank": 11},
+  {"city_code": "TPE", "city_name": "台北 Taipei",          "country": "Taiwan",        "amadeus_city_code": "TPE", "flight_hours": 4.5,  "category": "regional",    "popular_rank": 12},
+  {"city_code": "NRT", "city_name": "东京 Tokyo",           "country": "Japan",         "amadeus_city_code": "TYO", "flight_hours": 7.0,  "category": "long_haul",   "popular_rank": 13},
+  {"city_code": "KIX", "city_name": "大阪 Osaka",           "country": "Japan",         "amadeus_city_code": "OSA", "flight_hours": 7.0,  "category": "long_haul",   "popular_rank": 14},
+  {"city_code": "ICN", "city_name": "首尔 Seoul",           "country": "South Korea",   "amadeus_city_code": "SEL", "flight_hours": 6.5,  "category": "long_haul",   "popular_rank": 15}
+]
