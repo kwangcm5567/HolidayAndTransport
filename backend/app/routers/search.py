@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Query
 from pydantic import BaseModel
-from typing import Optional
 
 from app.schemas.flight import FlightSearchResponse
 from app.schemas.hotel import HotelSearchResponse
+from app.services.amadeus_flights import search_flights
 from app.services.amadeus_hotels import search_hotels
-from app.services.playwright_flights import scrape_google_flights, google_flights_url, skyscanner_url
+from app.services.playwright_flights import google_flights_url, skyscanner_url
 from app.config import settings
 
 router = APIRouter(prefix="/search", tags=["search"])
@@ -32,7 +32,7 @@ class SearchResponse(BaseModel):
 
 @router.post("", response_model=SearchResponse)
 async def search_flights_and_hotels(req: SearchRequest):
-    flights = await scrape_google_flights(
+    flights = await search_flights(
         origin=req.origin,
         destination=req.destination,
         outbound_date=req.outbound_date,
@@ -60,7 +60,7 @@ async def get_flights(
     adults: int = Query(default=1),
     origin: str = Query(default=settings.DEPARTURE_AIRPORT),
 ):
-    return await scrape_google_flights(origin, destination, outbound_date, return_date, adults)
+    return await search_flights(origin, destination, outbound_date, return_date, adults)
 
 
 @router.get("/flight-links", response_model=FlightLinksResponse)
@@ -70,7 +70,6 @@ def get_flight_links(
     return_date: str = Query(...),
     origin: str = Query(default=settings.DEPARTURE_AIRPORT),
 ):
-    """Always-available Google Flights and Skyscanner deep links — no scraping needed."""
     return FlightLinksResponse(
         google_flights=google_flights_url(origin, destination, outbound_date, return_date),
         skyscanner=skyscanner_url(origin, destination, outbound_date, return_date),
