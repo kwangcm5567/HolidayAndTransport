@@ -1,3 +1,6 @@
+from datetime import date, timedelta
+from typing import List, Optional
+
 from fastapi import APIRouter, Query
 from pydantic import BaseModel
 
@@ -5,7 +8,10 @@ from app.schemas.flight import FlightSearchResponse
 from app.schemas.hotel import HotelSearchResponse
 from app.services.amadeus_flights import search_flights
 from app.services.amadeus_hotels import search_hotels
-from app.services.playwright_flights import google_flights_url, skyscanner_url
+from app.services.playwright_flights import (
+    google_flights_url, skyscanner_url,
+    google_flights_url_nonstop, skyscanner_url_nonstop,
+)
 from app.config import settings
 
 router = APIRouter(prefix="/search", tags=["search"])
@@ -84,3 +90,55 @@ async def get_hotels(
     adults: int = Query(default=2),
 ):
     return await search_hotels(city_code, check_in, check_out, adults)
+
+
+class WeekendWindow(BaseModel):
+    outbound_date: str
+    return_date: str
+    nights: int
+    google_flights_url: str
+    skyscanner_url: str
+    amadeus_price_sgd: Optional[float]
+    currency: str
+
+
+@router.get("/weekend-windows", response_model=List[WeekendWindow])
+async def get_weekend_windows(
+    destination: str = Query(..., description="IATA city code, e.g. DPS"),
+    weeks: int = Query(default=8, le=12),
+    origin: str = Query(default=settings.DEPARTURE_AIRPORT),
+):
+    today = date.today()
+    days_until_friday = (4 - today.weekday()) % 7
+    if days_until_friday == 0:
+        days_until_friday = 7
+    first_friday = today + timedelta(days=days_until_friday)
+
+    results: List[WeekendWindow] = []
+    for i in range(weeks):
+        friday = first_friday + timedelta(weeks=i)
+        sunday = friday + timedelta(days=2)
+        outbound = friday.isoformat()
+        ret = sunday.isoformat()
+
+        amadeus_price: Optional[float] = None
+        currency = "SGD"
+        try:
+            flight_data = await search_flights(origin, destination, outbound, ret, adults=1)
+            if flight_data.offers:
+                amadeus_price = flight_data.offers[0].price_sgd
+                currency = flight_data.offers[0].currency
+        except Exception:
+            pass
+
+        results.append(WeekendWindow(
+            outbound_date=outbound,
+            return_date=ret,
+            nights=2,
+            google_flights_url=google_flights_url_nonstop(origin, destination, outbound, ret),
+            skyscanner_url=skyscanner_url_nonstop(origin, destination, outbound, ret),
+            amadeus_price_sgd=amadeus_price,
+            currency=currency,
+        ))
+
+    return results

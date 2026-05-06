@@ -131,3 +131,13 @@ export interface SearchRequest {
   return_date: string;
   adults: number;
 }
+
+export interface WeekendWindow {
+  outbound_date: string;
+  return_date: string;
+  nights: number;
+  google_flights_url: string;
+  skyscanner_url: string;
+  amadeus_price_sgd: number | null;
+  currency: string;
+}

@@ -7,6 +7,7 @@ import type {
   HotelSearchResponse,
   Destination,
   LeaveCategory,
+  WeekendWindow,
 } from "../types";
 
 export const BASE_URL = import.meta.env.VITE_API_URL
@@ -60,5 +61,10 @@ export const api = {
       .get<{ short_trips: Destination[]; regional: Destination[]; long_haul: Destination[] }>(
         "/destinations/popular"
       )
+      .then((r) => r.data),
+
+  getWeekendWindows: (destination: string, weeks = 8) =>
+    client
+      .get<WeekendWindow[]>("/search/weekend-windows", { params: { destination, weeks } })
       .then((r) => r.data),
 };
