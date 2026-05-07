@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Header } from "./components/layout/Header";
-import { Dashboard } from "./pages/Dashboard";
+import { CalendarPage } from "./pages/CalendarPage";
 import { WeekendGetaway } from "./pages/WeekendGetaway";
 import "./index.css";
 
@@ -14,7 +14,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen bg-gray-50">
         <Header activeTab={tab} onTabChange={setTab} />
-        {tab === "holiday" ? <Dashboard /> : <WeekendGetaway />}
+        {tab === "holiday" ? <CalendarPage /> : <WeekendGetaway />}
       </div>
     </QueryClientProvider>
   );

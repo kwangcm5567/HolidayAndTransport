@@ -138,6 +138,4 @@ export interface WeekendWindow {
   nights: number;
   google_flights_url: string;
   skyscanner_url: string;
-  amadeus_price_sgd: number | null;
-  currency: string;
 }
