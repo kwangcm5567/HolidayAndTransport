@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../services/api";
+import { googleFlightsUrl, skyscannerUrl } from "../utils/flightLinks";
 import { Spinner } from "../components/ui/Spinner";
 import type { Destination } from "../types";
+
+async function loadDestinations(): Promise<{ short_trips: Destination[]; regional: Destination[]; long_haul: Destination[] }> {
+  const res = await fetch("/destinations.json");
+  if (!res.ok) throw new Error("Failed");
+  const all: Destination[] = await res.json();
+  return {
+    short_trips: all.filter(d => d.category === "short_trip"),
+    regional: all.filter(d => d.category === "regional"),
+    long_haul: all.filter(d => d.category === "long_haul"),
+  };
+}
 
 const EMOJI: Record<string, string> = {
   PEN:"🏖️", LGK:"🌴", DPS:"🌊",
@@ -39,16 +50,34 @@ export function WeekendGetaway() {
   const [selectedDest, setSelectedDest] = useState("DPS");
 
   const { data: destinations, isLoading: destsLoading } = useQuery({
-    queryKey: ["destinations"],
-    queryFn: api.getDestinations,
+    queryKey: ["static-destinations"],
+    queryFn: loadDestinations,
     staleTime: Infinity,
   });
 
-  const { data: windows, isLoading: windowsLoading, isError } = useQuery({
-    queryKey: ["weekend-windows", selectedDest],
-    queryFn: () => api.getWeekendWindows(selectedDest, 8),
-    staleTime: 10 * 60 * 1000,
-  });
+  // Generate upcoming 8 Friday→Sunday windows entirely client-side
+  const windows = useMemo(() => {
+    const today = new Date();
+    const dow = today.getDay(); // 0=Sun,5=Fri
+    const daysToFri = ((5 - dow + 7) % 7) || 7;
+    const firstFri = new Date(today);
+    firstFri.setDate(today.getDate() + daysToFri);
+
+    return Array.from({ length: 8 }, (_, i) => {
+      const fri = new Date(firstFri);
+      fri.setDate(firstFri.getDate() + i * 7);
+      const sun = new Date(fri);
+      sun.setDate(fri.getDate() + 2);
+      const outbound = fri.toISOString().slice(0, 10);
+      const ret = sun.toISOString().slice(0, 10);
+      return {
+        outbound_date: outbound,
+        return_date: ret,
+        google_flights_url: googleFlightsUrl(selectedDest, outbound, ret),
+        skyscanner_url: skyscannerUrl(selectedDest, outbound, ret),
+      };
+    });
+  }, [selectedDest]);
 
   const selectedInfo = [
     ...(destinations?.short_trips ?? []),
@@ -111,15 +140,7 @@ export function WeekendGetaway() {
           <p className="text-xs text-gray-400 mt-0.5">直飞链接已预设，点击直接搜索</p>
         </div>
 
-        {windowsLoading && (
-          <div className="flex justify-center py-12"><Spinner size="lg" /></div>
-        )}
-
-        {isError && (
-          <p className="text-center text-sm text-red-500 py-8">无法加载数据，请稍后重试。</p>
-        )}
-
-        {!windowsLoading && !isError && windows && (
+        {(
           <div className="divide-y divide-gray-50">
             {windows.map((w, i) => (
               <div key={w.outbound_date} className="px-4 py-3 flex flex-wrap items-center gap-3">

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../../services/api";
-import type { HolidayWindowSummary, DestinationDeal } from "../../types";
+import type { HolidayWindowSummary, DestinationDeal, Destination } from "../../types";
 import { googleFlightsUrl, skyscannerUrl } from "../../utils/flightLinks";
 
 const CAT_INFO: Record<string, { label: string; cls: string }> = {
@@ -21,6 +20,12 @@ function fmt(iso: string) {
   return new Date(iso + "T12:00:00").toLocaleDateString("zh-SG", {
     month: "short", day: "numeric", weekday: "short",
   });
+}
+
+async function loadDestinations(): Promise<Destination[]> {
+  const res = await fetch("/destinations.json");
+  if (!res.ok) throw new Error("Failed");
+  return res.json();
 }
 
 function DestChip({ deal, win }: { deal: DestinationDeal; win: HolidayWindowSummary }) {
@@ -45,20 +50,12 @@ function DestChip({ deal, win }: { deal: DestinationDeal; win: HolidayWindowSumm
       </button>
       {open && (
         <div className="absolute top-full left-0 mt-1 z-30 bg-white border border-gray-200 rounded-xl shadow-xl p-2 flex flex-col gap-1.5 min-w-max">
-          <a
-            href={gUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700"
-          >
+          <a href={gUrl} target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700">
             🔍 Google Flights
           </a>
-          <a
-            href={sUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-700"
-          >
+          <a href={sUrl} target="_blank" rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 text-white text-sm font-medium hover:bg-purple-700">
             ✈ Skyscanner
           </a>
         </div>
@@ -80,24 +77,32 @@ export function WindowPanel({ windows, onClose }: Props) {
   const win = windows.find(w => w.category === selectedCat) ?? windows[0];
 
   const { data: destinations } = useQuery({
-    queryKey: ["destinations"],
-    queryFn: api.getDestinations,
+    queryKey: ["static-destinations"],
+    queryFn: loadDestinations,
     staleTime: Infinity,
   });
 
   const catByCode: Record<string, string> = {};
-  if (destinations) {
-    [...destinations.short_trips, ...destinations.regional, ...destinations.long_haul]
-      .forEach(d => { catByCode[d.city_code] = d.category; });
-  }
+  (destinations ?? []).forEach(d => { catByCode[d.city_code] = d.category; });
 
-  const shortDeals = win.deals.filter(d => catByCode[d.city_code] === "short_trip");
-  const regionalDeals = win.deals.filter(d => catByCode[d.city_code] === "regional");
-  const longDeals = win.deals.filter(d => catByCode[d.city_code] === "long_haul");
+  // Build deals from destinations (no Amadeus prices needed)
+  const allDeals: DestinationDeal[] = (destinations ?? []).map(d => ({
+    city_code: d.city_code,
+    city_name: d.city_name,
+    country: d.country,
+    cheapest_flight_sgd: null,
+    cheapest_hotel_total_sgd: null,
+    total_estimated_sgd: null,
+    nights: (new Date(win.window_end + "T12:00:00").getTime() - new Date(win.window_start + "T12:00:00").getTime()) / 86400000,
+    flight_hours: d.flight_hours,
+  }));
+
+  const shortDeals = allDeals.filter(d => catByCode[d.city_code] === "short_trip");
+  const regionalDeals = allDeals.filter(d => catByCode[d.city_code] === "regional");
+  const longDeals = allDeals.filter(d => catByCode[d.city_code] === "long_haul");
 
   return (
     <div className="mt-4 bg-white rounded-xl border border-blue-200 shadow-xl overflow-hidden">
-      {/* Header */}
       <div className="px-4 py-3 bg-blue-50 border-b border-blue-100 flex items-start justify-between gap-2">
         <div>
           <h2 className="font-bold text-gray-900 text-base">{win.holiday_name}</h2>
@@ -108,15 +113,12 @@ export function WindowPanel({ windows, onClose }: Props) {
         <button onClick={onClose} className="text-gray-400 hover:text-gray-700 text-2xl leading-none mt-0.5">×</button>
       </div>
 
-      {/* Leave tabs */}
       <div className="flex gap-2 px-4 pt-3 flex-wrap">
         {orderedCats.map(cat => {
           const info = CAT_INFO[cat];
           const w = windows.find(x => x.category === cat)!;
           return (
-            <button
-              key={cat}
-              onClick={() => setSelectedCat(cat)}
+            <button key={cat} onClick={() => setSelectedCat(cat)}
               className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
                 selectedCat === cat ? info.cls : "border-gray-200 text-gray-500 hover:border-gray-300"
               }`}
@@ -130,14 +132,13 @@ export function WindowPanel({ windows, onClose }: Props) {
         })}
       </div>
 
-      {/* Window detail */}
       <div className="px-4 py-2 border-b border-gray-100">
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <span className="font-medium text-gray-800">
             {fmt(win.window_start)} → {fmt(win.window_end)}
           </span>
           <span className="bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 text-xs font-medium">
-            共 {win.total_days_off} 天假期
+            共 {win.total_days_off} 天
           </span>
           {win.leave_dates.length > 0 && (
             <span className="text-xs text-gray-500">
@@ -147,7 +148,6 @@ export function WindowPanel({ windows, onClose }: Props) {
         </div>
       </div>
 
-      {/* Destinations */}
       <div className="px-4 py-3 space-y-3">
         {shortDeals.length > 0 && (
           <div>

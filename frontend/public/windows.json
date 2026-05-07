@@ -1,0 +1,1703 @@
+{
+  "2025": {
+    "year": 2025,
+    "total_holidays": 11,
+    "windows": [
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2025-01-01",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-01-01",
+        "window_end": "2025-01-01",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2025-01-01",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2024-12-28",
+        "window_end": "2025-01-01",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2024-12-30",
+          "2024-12-31"
+        ]
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2025-01-01",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2024-12-27",
+        "window_end": "2025-01-05",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2024-12-27",
+          "2024-12-30",
+          "2024-12-31",
+          "2025-01-02",
+          "2025-01-03"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2025-01-29",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-01-29",
+        "window_end": "2025-01-30",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2025-01-29",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-01-25",
+        "window_end": "2025-01-30",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2025-01-27",
+          "2025-01-28"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2025-01-29",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-01-23",
+        "window_end": "2025-02-02",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2025-01-23",
+          "2025-01-24",
+          "2025-01-27",
+          "2025-01-28",
+          "2025-01-31"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2025-01-30",
+        "holiday_day_of_week": "Thursday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-01-29",
+        "window_end": "2025-01-30",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2025-01-30",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-01-25",
+        "window_end": "2025-01-30",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2025-01-27",
+          "2025-01-28"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2025-01-30",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-01-23",
+        "window_end": "2025-02-02",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2025-01-23",
+          "2025-01-24",
+          "2025-01-27",
+          "2025-01-28",
+          "2025-01-31"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2025-03-31",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-03-29",
+        "window_end": "2025-03-31",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2025-03-31",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-03-27",
+        "window_end": "2025-03-31",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-03-27",
+          "2025-03-28"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2025-03-31",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-03-22",
+        "window_end": "2025-03-31",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-03-24",
+          "2025-03-25",
+          "2025-03-26",
+          "2025-03-27",
+          "2025-03-28"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2025-04-18",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-04-18",
+        "window_end": "2025-04-20",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2025-04-18",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-04-16",
+        "window_end": "2025-04-20",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-04-16",
+          "2025-04-17"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2025-04-18",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-04-11",
+        "window_end": "2025-04-20",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-04-11",
+          "2025-04-14",
+          "2025-04-15",
+          "2025-04-16",
+          "2025-04-17"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2025-05-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-05-01",
+        "window_end": "2025-05-01",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2025-05-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-04-30",
+        "window_end": "2025-05-04",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-04-30",
+          "2025-05-02"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2025-05-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-04-25",
+        "window_end": "2025-05-04",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-04-25",
+          "2025-04-28",
+          "2025-04-29",
+          "2025-04-30",
+          "2025-05-02"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2025-05-12",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-05-10",
+        "window_end": "2025-05-12",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2025-05-12",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-05-08",
+        "window_end": "2025-05-12",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-05-08",
+          "2025-05-09"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2025-05-12",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-05-03",
+        "window_end": "2025-05-12",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-05-05",
+          "2025-05-06",
+          "2025-05-07",
+          "2025-05-08",
+          "2025-05-09"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2025-06-06",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-06-06",
+        "window_end": "2025-06-08",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2025-06-06",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-06-04",
+        "window_end": "2025-06-08",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-06-04",
+          "2025-06-05"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2025-06-06",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-05-30",
+        "window_end": "2025-06-08",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-05-30",
+          "2025-06-02",
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-05"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2025-08-09",
+        "holiday_day_of_week": "Saturday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-08-09",
+        "window_end": "2025-08-10",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2025-08-09",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-08-07",
+        "window_end": "2025-08-10",
+        "total_days_off": 4,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-08-07",
+          "2025-08-08"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2025-08-09",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-08-02",
+        "window_end": "2025-08-10",
+        "total_days_off": 9,
+        "efficiency": 1.8,
+        "leave_dates": [
+          "2025-08-04",
+          "2025-08-05",
+          "2025-08-06",
+          "2025-08-07",
+          "2025-08-08"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2025-10-20",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-10-18",
+        "window_end": "2025-10-20",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2025-10-20",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-10-16",
+        "window_end": "2025-10-20",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-10-16",
+          "2025-10-17"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2025-10-20",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-10-11",
+        "window_end": "2025-10-20",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-10-13",
+          "2025-10-14",
+          "2025-10-15",
+          "2025-10-16",
+          "2025-10-17"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2025-12-25",
+        "holiday_day_of_week": "Thursday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2025-12-25",
+        "window_end": "2025-12-25",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2025-12-25",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-12-24",
+        "window_end": "2025-12-28",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-12-24",
+          "2025-12-26"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2025-12-25",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-12-19",
+        "window_end": "2025-12-28",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-12-19",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-26"
+        ]
+      }
+    ],
+    "last_updated": "2026-05-07T00:00:00"
+  },
+  "2026": {
+    "year": 2026,
+    "total_holidays": 12,
+    "windows": [
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2026-01-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-01-01",
+        "window_end": "2026-01-01",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2026-01-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2025-12-31",
+        "window_end": "2026-01-04",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2025-12-31",
+          "2026-01-02"
+        ]
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2026-01-01",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2025-12-26",
+        "window_end": "2026-01-04",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2025-12-26",
+          "2025-12-29",
+          "2025-12-30",
+          "2025-12-31",
+          "2026-01-02"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2026-02-17",
+        "holiday_day_of_week": "Tuesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-02-17",
+        "window_end": "2026-02-18",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2026-02-17",
+        "holiday_day_of_week": "Tuesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-02-13",
+        "window_end": "2026-02-18",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2026-02-13",
+          "2026-02-16"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2026-02-17",
+        "holiday_day_of_week": "Tuesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-02-12",
+        "window_end": "2026-02-22",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2026-02-12",
+          "2026-02-13",
+          "2026-02-16",
+          "2026-02-19",
+          "2026-02-20"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2026-02-18",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-02-17",
+        "window_end": "2026-02-18",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2026-02-18",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-02-13",
+        "window_end": "2026-02-18",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2026-02-13",
+          "2026-02-16"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2026-02-18",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-02-12",
+        "window_end": "2026-02-22",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2026-02-12",
+          "2026-02-13",
+          "2026-02-16",
+          "2026-02-19",
+          "2026-02-20"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2026-03-20",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-03-20",
+        "window_end": "2026-03-22",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2026-03-20",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-03-18",
+        "window_end": "2026-03-22",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-03-18",
+          "2026-03-19"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2026-03-20",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-03-13",
+        "window_end": "2026-03-22",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-03-13",
+          "2026-03-16",
+          "2026-03-17",
+          "2026-03-18",
+          "2026-03-19"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2026-04-03",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-04-03",
+        "window_end": "2026-04-05",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2026-04-03",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-04-01",
+        "window_end": "2026-04-05",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-04-01",
+          "2026-04-02"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2026-04-03",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-03-27",
+        "window_end": "2026-04-05",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-03-27",
+          "2026-03-30",
+          "2026-03-31",
+          "2026-04-01",
+          "2026-04-02"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2026-05-01",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-05-01",
+        "window_end": "2026-05-03",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2026-05-01",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-04-29",
+        "window_end": "2026-05-03",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-04-29",
+          "2026-04-30"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2026-05-01",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-04-24",
+        "window_end": "2026-05-03",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-04-24",
+          "2026-04-27",
+          "2026-04-28",
+          "2026-04-29",
+          "2026-04-30"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2026-05-20",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-05-20",
+        "window_end": "2026-05-20",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2026-05-20",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-05-16",
+        "window_end": "2026-05-20",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-05-18",
+          "2026-05-19"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2026-05-20",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-05-15",
+        "window_end": "2026-05-24",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-05-15",
+          "2026-05-18",
+          "2026-05-19",
+          "2026-05-21",
+          "2026-05-22"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2026-05-27",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-05-27",
+        "window_end": "2026-05-27",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2026-05-27",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-05-23",
+        "window_end": "2026-05-27",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-05-25",
+          "2026-05-26"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2026-05-27",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-05-22",
+        "window_end": "2026-05-31",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-05-22",
+          "2026-05-25",
+          "2026-05-26",
+          "2026-05-28",
+          "2026-05-29"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2026-08-09",
+        "holiday_day_of_week": "Sunday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-08-08",
+        "window_end": "2026-08-10",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2026-08-09",
+        "holiday_day_of_week": "Sunday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-08-06",
+        "window_end": "2026-08-10",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-08-06",
+          "2026-08-07"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2026-08-09",
+        "holiday_day_of_week": "Sunday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-08-01",
+        "window_end": "2026-08-10",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-08-03",
+          "2026-08-04",
+          "2026-08-05",
+          "2026-08-06",
+          "2026-08-07"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "National Day (Substitute)",
+        "holiday_date": "2026-08-10",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-08-08",
+        "window_end": "2026-08-10",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "National Day (Substitute)",
+        "holiday_date": "2026-08-10",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-08-06",
+        "window_end": "2026-08-10",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-08-06",
+          "2026-08-07"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "National Day (Substitute)",
+        "holiday_date": "2026-08-10",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-08-01",
+        "window_end": "2026-08-10",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-08-03",
+          "2026-08-04",
+          "2026-08-05",
+          "2026-08-06",
+          "2026-08-07"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2026-11-09",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-11-07",
+        "window_end": "2026-11-09",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2026-11-09",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-11-05",
+        "window_end": "2026-11-09",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-11-05",
+          "2026-11-06"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2026-11-09",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-10-31",
+        "window_end": "2026-11-09",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-11-02",
+          "2026-11-03",
+          "2026-11-04",
+          "2026-11-05",
+          "2026-11-06"
+        ]
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2026-12-25",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2026-12-25",
+        "window_end": "2026-12-27",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2026-12-25",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-12-23",
+        "window_end": "2026-12-27",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-12-23",
+          "2026-12-24"
+        ]
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2026-12-25",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-12-18",
+        "window_end": "2026-12-27",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-12-18",
+          "2026-12-21",
+          "2026-12-22",
+          "2026-12-23",
+          "2026-12-24"
+        ]
+      }
+    ],
+    "last_updated": "2026-05-07T00:00:00"
+  },
+  "2027": {
+    "year": 2027,
+    "total_holidays": 12,
+    "windows": [
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2027-01-01",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-01-01",
+        "window_end": "2027-01-03",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2027-01-01",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2026-12-30",
+        "window_end": "2027-01-03",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2026-12-30",
+          "2026-12-31"
+        ]
+      },
+      {
+        "holiday_id": 1,
+        "holiday_name": "New Year's Day",
+        "holiday_date": "2027-01-01",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2026-12-25",
+        "window_end": "2027-01-03",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2026-12-25",
+          "2026-12-28",
+          "2026-12-29",
+          "2026-12-30",
+          "2026-12-31"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2027-02-06",
+        "holiday_day_of_week": "Saturday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-02-06",
+        "window_end": "2027-02-07",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2027-02-06",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-02-04",
+        "window_end": "2027-02-07",
+        "total_days_off": 4,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-02-04",
+          "2027-02-05"
+        ]
+      },
+      {
+        "holiday_id": 2,
+        "holiday_name": "Chinese New Year Day 1",
+        "holiday_date": "2027-02-06",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-01-30",
+        "window_end": "2027-02-07",
+        "total_days_off": 9,
+        "efficiency": 1.8,
+        "leave_dates": [
+          "2027-02-01",
+          "2027-02-02",
+          "2027-02-03",
+          "2027-02-04",
+          "2027-02-05"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2027-02-07",
+        "holiday_day_of_week": "Sunday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-02-06",
+        "window_end": "2027-02-07",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2027-02-07",
+        "holiday_day_of_week": "Sunday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-02-04",
+        "window_end": "2027-02-07",
+        "total_days_off": 4,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-02-04",
+          "2027-02-05"
+        ]
+      },
+      {
+        "holiday_id": 3,
+        "holiday_name": "Chinese New Year Day 2",
+        "holiday_date": "2027-02-07",
+        "holiday_day_of_week": "Sunday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-01-30",
+        "window_end": "2027-02-07",
+        "total_days_off": 9,
+        "efficiency": 1.8,
+        "leave_dates": [
+          "2027-02-01",
+          "2027-02-02",
+          "2027-02-03",
+          "2027-02-04",
+          "2027-02-05"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2027-03-10",
+        "holiday_day_of_week": "Wednesday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-03-10",
+        "window_end": "2027-03-10",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2027-03-10",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-03-06",
+        "window_end": "2027-03-10",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-03-08",
+          "2027-03-09"
+        ]
+      },
+      {
+        "holiday_id": 4,
+        "holiday_name": "Hari Raya Puasa",
+        "holiday_date": "2027-03-10",
+        "holiday_day_of_week": "Wednesday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-03-05",
+        "window_end": "2027-03-14",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-03-05",
+          "2027-03-08",
+          "2027-03-09",
+          "2027-03-11",
+          "2027-03-12"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2027-03-26",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-03-26",
+        "window_end": "2027-03-28",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2027-03-26",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-03-24",
+        "window_end": "2027-03-28",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-03-24",
+          "2027-03-25"
+        ]
+      },
+      {
+        "holiday_id": 5,
+        "holiday_name": "Good Friday",
+        "holiday_date": "2027-03-26",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-03-19",
+        "window_end": "2027-03-28",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-03-19",
+          "2027-03-22",
+          "2027-03-23",
+          "2027-03-24",
+          "2027-03-25"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2027-05-01",
+        "holiday_day_of_week": "Saturday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-05-01",
+        "window_end": "2027-05-02",
+        "total_days_off": 2,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2027-05-01",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-04-29",
+        "window_end": "2027-05-02",
+        "total_days_off": 4,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-04-29",
+          "2027-04-30"
+        ]
+      },
+      {
+        "holiday_id": 6,
+        "holiday_name": "Labour Day",
+        "holiday_date": "2027-05-01",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-04-24",
+        "window_end": "2027-05-02",
+        "total_days_off": 9,
+        "efficiency": 1.8,
+        "leave_dates": [
+          "2027-04-26",
+          "2027-04-27",
+          "2027-04-28",
+          "2027-04-29",
+          "2027-04-30"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2027-05-13",
+        "holiday_day_of_week": "Thursday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-05-13",
+        "window_end": "2027-05-13",
+        "total_days_off": 1,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2027-05-13",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-05-12",
+        "window_end": "2027-05-17",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2027-05-12",
+          "2027-05-14"
+        ]
+      },
+      {
+        "holiday_id": 7,
+        "holiday_name": "Vesak Day",
+        "holiday_date": "2027-05-13",
+        "holiday_day_of_week": "Thursday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-05-07",
+        "window_end": "2027-05-17",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2027-05-07",
+          "2027-05-10",
+          "2027-05-11",
+          "2027-05-12",
+          "2027-05-14"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2027-05-17",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-05-15",
+        "window_end": "2027-05-17",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2027-05-17",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-05-12",
+        "window_end": "2027-05-17",
+        "total_days_off": 6,
+        "efficiency": 3.0,
+        "leave_dates": [
+          "2027-05-12",
+          "2027-05-14"
+        ]
+      },
+      {
+        "holiday_id": 8,
+        "holiday_name": "Hari Raya Haji",
+        "holiday_date": "2027-05-17",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-05-07",
+        "window_end": "2027-05-17",
+        "total_days_off": 11,
+        "efficiency": 2.2,
+        "leave_dates": [
+          "2027-05-07",
+          "2027-05-10",
+          "2027-05-11",
+          "2027-05-12",
+          "2027-05-14"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2027-08-09",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-08-07",
+        "window_end": "2027-08-09",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2027-08-09",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-08-05",
+        "window_end": "2027-08-09",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-08-05",
+          "2027-08-06"
+        ]
+      },
+      {
+        "holiday_id": 9,
+        "holiday_name": "National Day",
+        "holiday_date": "2027-08-09",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-07-31",
+        "window_end": "2027-08-09",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-08-02",
+          "2027-08-03",
+          "2027-08-04",
+          "2027-08-05",
+          "2027-08-06"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2027-10-29",
+        "holiday_day_of_week": "Friday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-10-29",
+        "window_end": "2027-10-31",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2027-10-29",
+        "holiday_day_of_week": "Friday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-10-27",
+        "window_end": "2027-10-31",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-10-27",
+          "2027-10-28"
+        ]
+      },
+      {
+        "holiday_id": 10,
+        "holiday_name": "Deepavali",
+        "holiday_date": "2027-10-29",
+        "holiday_day_of_week": "Friday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-10-22",
+        "window_end": "2027-10-31",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-10-22",
+          "2027-10-25",
+          "2027-10-26",
+          "2027-10-27",
+          "2027-10-28"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2027-12-25",
+        "holiday_day_of_week": "Saturday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-12-25",
+        "window_end": "2027-12-27",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2027-12-25",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-12-23",
+        "window_end": "2027-12-27",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-12-23",
+          "2027-12-24"
+        ]
+      },
+      {
+        "holiday_id": 11,
+        "holiday_name": "Christmas Day",
+        "holiday_date": "2027-12-25",
+        "holiday_day_of_week": "Saturday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-12-18",
+        "window_end": "2027-12-27",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-12-20",
+          "2027-12-21",
+          "2027-12-22",
+          "2027-12-23",
+          "2027-12-24"
+        ]
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day (Substitute)",
+        "holiday_date": "2027-12-27",
+        "holiday_day_of_week": "Monday",
+        "category": "no_leave",
+        "leave_days_required": 0,
+        "window_start": "2027-12-25",
+        "window_end": "2027-12-27",
+        "total_days_off": 3,
+        "efficiency": null,
+        "leave_dates": []
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day (Substitute)",
+        "holiday_date": "2027-12-27",
+        "holiday_day_of_week": "Monday",
+        "category": "take_1_2",
+        "leave_days_required": 2,
+        "window_start": "2027-12-23",
+        "window_end": "2027-12-27",
+        "total_days_off": 5,
+        "efficiency": 2.5,
+        "leave_dates": [
+          "2027-12-23",
+          "2027-12-24"
+        ]
+      },
+      {
+        "holiday_id": 12,
+        "holiday_name": "Christmas Day (Substitute)",
+        "holiday_date": "2027-12-27",
+        "holiday_day_of_week": "Monday",
+        "category": "take_3_5",
+        "leave_days_required": 5,
+        "window_start": "2027-12-18",
+        "window_end": "2027-12-27",
+        "total_days_off": 10,
+        "efficiency": 2.0,
+        "leave_dates": [
+          "2027-12-20",
+          "2027-12-21",
+          "2027-12-22",
+          "2027-12-23",
+          "2027-12-24"
+        ]
+      }
+    ],
+    "last_updated": "2026-05-07T00:00:00"
+  }
+}

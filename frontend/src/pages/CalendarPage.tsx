@@ -1,6 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../services/api";
 import { useFilterStore } from "../store/filterStore";
 import type { HolidayWindowSummary } from "../types";
 import { YearSelector } from "../components/filters/YearSelector";
@@ -8,18 +7,31 @@ import { Spinner } from "../components/ui/Spinner";
 import { YearCalendar, type DateMap } from "../components/calendar/YearCalendar";
 import { WindowPanel } from "../components/calendar/WindowPanel";
 
+interface StaticData {
+  year: number;
+  total_holidays: number;
+  windows: HolidayWindowSummary[];
+  last_updated: string;
+}
+
+async function loadWindows(year: number): Promise<StaticData> {
+  const res = await fetch(`/windows.json`);
+  if (!res.ok) throw new Error("Failed to load");
+  const all = await res.json();
+  return all[String(year)];
+}
+
 export function CalendarPage() {
   const { year } = useFilterStore();
   const [selectedHolidayId, setSelectedHolidayId] = useState<number | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["dashboard", year, "all"],
-    queryFn: () => api.getDashboard(year, "all"),
-    staleTime: 5 * 60 * 1000,
+    queryKey: ["static-windows", year],
+    queryFn: () => loadWindows(year),
+    staleTime: Infinity,
   });
 
-  // Build date → windows map and holiday date → name map
   const { dateMap, holidayMap } = useMemo(() => {
     const dateMap: DateMap = {};
     const holidayMap: Record<string, string> = {};
@@ -46,7 +58,6 @@ export function CalendarPage() {
     [data, selectedHolidayId]
   );
 
-  // Scroll to panel when a window is selected
   useEffect(() => {
     if (selectedHolidayId !== null && panelRef.current) {
       setTimeout(() => panelRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
@@ -60,7 +71,6 @@ export function CalendarPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-6">
-      {/* Controls */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
         <YearSelector />
         <div className="flex flex-wrap gap-3 text-xs text-gray-500">
@@ -83,7 +93,7 @@ export function CalendarPage() {
         <div className="flex justify-center py-16">
           <div className="text-center">
             <Spinner size="lg" />
-            <p className="text-gray-500 mt-3 text-sm">正在加载假期数据…</p>
+            <p className="text-gray-500 mt-3 text-sm">正在加载…</p>
           </div>
         </div>
       )}
@@ -103,7 +113,6 @@ export function CalendarPage() {
             selectedHolidayId={selectedHolidayId}
             onDayClick={handleDayClick}
           />
-
           <div ref={panelRef}>
             {selectedWindows.length > 0 && (
               <WindowPanel
